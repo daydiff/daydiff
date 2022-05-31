@@ -23,7 +23,7 @@ cat $1 | while rssgetnext ; do
          ;;
       '/item')
          cat<<EOF
-<ul><li>$pubDate <a href="$link">$title</a></ul>
+* $pubDate [$title]($link)
 EOF
          ;;
    esac
