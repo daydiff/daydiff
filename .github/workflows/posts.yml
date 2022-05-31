@@ -31,5 +31,5 @@ jobs:
       run: |
         git config --global user.name 'Aleksandr Tabakov'
         git config --global user.email 'daydiff@users.noreply.github.com'
-        git commit -am "Updated blog posts"
+        git commit -am "Updated blog posts" | exit 0
         git push
