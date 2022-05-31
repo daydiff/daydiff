@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '0 0 * * *'
 
 jobs:
   update-readme-with-latest-posts:
@@ -15,14 +15,23 @@ jobs:
     - name: Fetching RSS feed
       run: wget --quiet -O rss.xml https://atabakoff.com/posts/index.xml
     - name: Debug
-      run: ls -la /home/runner/work/daydiff/daydiff && pwd && ls -la `pwd` && ls -la ~
+      run: |
+        ls -la /home/runner/work/daydiff/daydiff
+        pwd
+        ls -la `pwd`
+        ls -la ~
     - name: Parsing the feed
       run: $( pwd )/rss.sh rss.xml > posts.html
     - name: Updating the README.md
-      run:  POSTS=$( cat posts.html ) && sed -E "s#<\!--blog:posts>(.*)<\/blog:posts-->#$POSTS#" README.md > README.tmp && mv README.tmp README.md
+      run:  |
+        POSTS=$( cat posts.html )
+        sed -E "s#<\!--blog:start>(.*)<\/blog:end-->#<\!--blog:start>$POSTS<\/blog:end-->#" README.md > README.tmp
+        mv README.tmp README.md
     - name: Cleanup
       run: rm -f rss.xml posts.html
     - name: Push changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Updated latest blog posts
+      run: |
+        git config --global user.name 'Aleksandr Tabakov'
+        git config --global user.email 'daydiff@users.noreply.github.com'
+        git commit -am "Updated blog posts"
+        git push
