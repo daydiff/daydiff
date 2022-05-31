@@ -17,7 +17,7 @@ jobs:
     - name: Debug
       run: ls -la /home/runner/work/daydiff/daydiff && pwd && ls -la `pwd` && ls -la ~
     - name: Parsing the feed
-      run: /home/runner/work/daydiff/daydiff/rss.sh rss.xml > posts.html
+      run: `pwd`/rss.sh rss.xml > posts.html
     - name: Updating the README.md
       run:  POSTS=$( cat posts.html ) && sed -E "s#<\!--blog:posts>(.*)<\/blog:posts-->#$POSTS#" README.md > README.tmp && mv README.tmp README.md
     - name: Cleanup
