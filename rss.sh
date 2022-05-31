@@ -1,11 +1,11 @@
 #!/bin/bash
 
-rssgetnext () {
+xmlgetnext () {
    local IFS='>'
    read -d '<' TAG VALUE
 }
 
-cat $1 | while rssgetnext ; do
+cat $1 | while xmlgetnext ; do
    case $TAG in
       'item')
          title=''

@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-### 📖 Check out what I've published recently:
+### 📖 Check out what I've published recently
 
 <!--blog:start-->
 * 27/05/2022 [How to run Vaultwarden in Docker/Podman as a systemd service](https://atabakoff.com/how-to-run-vaultwarden-in-podman-as-a-systemd-service/)

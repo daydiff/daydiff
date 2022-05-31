@@ -12,20 +12,18 @@ jobs:
     steps:
     - name: Clone repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
     - name: Fetching RSS feed
       run: wget --quiet -O rss.xml https://atabakoff.com/posts/index.xml
-    - name: Debug
-      run: |
-        ls -la /home/runner/work/daydiff/daydiff
-        pwd
-        ls -la `pwd`
-        ls -la ~
     - name: Parsing the feed
-      run: $( pwd )/rss.sh rss.xml > posts.md
+      run: |
+        cd ${GITHUB_WORKSPACE}
+        ./rss.sh rss.xml > posts.md
     - name: Updating the README.md
       run:  |
         POSTS=$( cat posts.md | tr '\n' '\t' )
-        cat README.md | tr '\n' '\t' | sed -E "s#(<\!--blog:start-->).*(<\!--blog:end-->)#\1\t$POSTS\2#g" | tr '\t' '\n' > README.tmp
+        cat README.md | tr '\n' '\t' | sed -E "s#(<\!--blog:start-->).*(<\!--blog:end-->)#\1\t${POSTS}\2#g" | tr '\t' '\n' > README.tmp
         mv README.tmp README.md
     - name: Cleanup
       run: rm -f rss.xml posts.md
