@@ -19,11 +19,11 @@ jobs:
     - name: Parse RSS feed
       run: |
         cd ${GITHUB_WORKSPACE}
-        ./parse-rss.sh rss.xml > posts.md
+        ./src/parse-rss.sh rss.xml > posts.md
     - name: Update README.md
       run:  |
         cd ${GITHUB_WORKSPACE}
-        ./update-readme.sh posts.md 5
+        ./src/update-readme.sh posts.md 5
     - name: Push changes
       run: |
         git config --global user.name "${GITHUB_ACTOR}"
