@@ -14,22 +14,19 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 1
-    - name: Fetching RSS feed
+    - name: Fetch RSS feed
       run: wget --quiet -O rss.xml https://atabakoff.com/posts/index.xml
-    - name: Parsing the feed
+    - name: Parse RSS feed
       run: |
         cd ${GITHUB_WORKSPACE}
-        ./rss.sh rss.xml > posts.md
-    - name: Updating the README.md
+        ./parse-rss.sh rss.xml > posts.md
+    - name: Update README.md
       run:  |
-        POSTS=$( cat posts.md | tr '\n' '\t' )
-        cat README.md | tr '\n' '\t' | sed -E "s#(<\!--blog:start-->).*(<\!--blog:end-->)#\1\t${POSTS}\2#g" | tr '\t' '\n' > README.tmp
-        mv README.tmp README.md
-    - name: Cleanup
-      run: rm -f rss.xml posts.md
+        cd ${GITHUB_WORKSPACE}
+        ./update-readme.sh posts.md 5
     - name: Push changes
       run: |
-        git config --global user.name 'Aleksandr Tabakov'
-        git config --global user.email 'daydiff@users.noreply.github.com'
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git commit -am "Updated blog posts" | exit 0
         git push
