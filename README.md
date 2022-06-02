@@ -17,5 +17,6 @@ Here are some ideas to get you started:
 ### 📖 Check out what I've published recently
 
 <!--blog:start-->
+* 02/06/2022 [Creating a Dynamic Github Profile With Github Actions and Bash](https://atabakoff.com/creating-a-dynamic-github-profile-with-github-actions-and-bash/)
 * 27/05/2022 [How to run Vaultwarden in Docker/Podman as a systemd service](https://atabakoff.com/how-to-run-vaultwarden-in-podman-as-a-systemd-service/)
 <!--blog:end-->
