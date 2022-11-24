@@ -23,6 +23,6 @@ Here are some ideas to get you started:
 * 27/05/2022 [How to run Vaultwarden in Podman as a systemd service](https://atabakoff.com/how-to-run-vaultwarden-in-podman-as-a-systemd-service/)
 <!--blog:end-->
 
-### 🪙 My certifications
+### 🔏 My certifications
 
 [![CKAD: Certified Kubernetes Application Developer](https://raw.githubusercontent.com/daydiff/daydiff/master/static/ckad_from_cncfsite.png "CKAD: Certified Kubernetes Application Developer")](https://www.credly.com/badges/0d44ab28-9992-46d5-8e0f-9e1f998b95a6/public_url)
