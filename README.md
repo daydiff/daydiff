@@ -25,4 +25,4 @@ Here are some ideas to get you started:
 
 ### 🪙 My certifications
 
-[![CKAD: Certified Kubernetes Application Developer](https://github.com/daydiff/daydiff/master/static/ckad_from_cncfsite.png "CKAD: Certified Kubernetes Application Developer")](https://www.credly.com/badges/0d44ab28-9992-46d5-8e0f-9e1f998b95a6/public_url)
+[![CKAD: Certified Kubernetes Application Developer](https://raw.githubusercontent.com/daydiff/daydiff/master/static/ckad_from_cncfsite.png "CKAD: Certified Kubernetes Application Developer")](https://www.credly.com/badges/0d44ab28-9992-46d5-8e0f-9e1f998b95a6/public_url)
