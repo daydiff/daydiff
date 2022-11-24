@@ -22,3 +22,7 @@ Here are some ideas to get you started:
 * 02/06/2022 [Create Dynamic Github Profile Using Github Actions and Bash](https://atabakoff.com/creating-a-dynamic-github-profile-with-github-actions-and-bash/)
 * 27/05/2022 [How to run Vaultwarden in Podman as a systemd service](https://atabakoff.com/how-to-run-vaultwarden-in-podman-as-a-systemd-service/)
 <!--blog:end-->
+
+### 🪙 My certifications
+
+<a href="https://www.credly.com/badges/0d44ab28-9992-46d5-8e0f-9e1f998b95a6/public_url" target="_blank"><img src="https://images.credly.com/size/110x110/images/f88d800c-5261-45c6-9515-0458e31c3e16/ckad_from_cncfsite.png" alt="CKAD: Certified Kubernetes Application Developer" width="110" height="110"></a>
