@@ -17,6 +17,7 @@ Here are some ideas to get you started:
 ### 📖 Check out what I've published recently
 
 <!--blog:start-->
+* 17/09/2023 [Search Engines Better Than Google](https://atabakoff.com/search-engines-better-than-google/)
 * 18/03/2023 [How HTTP Works: Hands on Explanation](https://atabakoff.com/how-http-works-hands-on-explanation/)
 * 22/06/2022 [10 Must Have Command Line Tools for Linux](https://atabakoff.com/10-must-have-command-line-tools-for-linux/)
 * 12/06/2022 [Writing Resilient Unit Tests With Ease](https://atabakoff.com/writing-resilient-unit-tests/)
